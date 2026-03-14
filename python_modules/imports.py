@@ -5,10 +5,10 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 import kagglehub
+import seaborn as sns
 
 from torchvision import datasets, models
 from torch.utils.data import DataLoader
-from torchvision.models import resnet50, ResNet50_Weights
 from torchvision.models import efficientnet_b0, EfficientNet_B0_Weights
 
 from sklearn.metrics import classification_report, confusion_matrix

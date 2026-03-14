@@ -5,6 +5,7 @@ path = kagglehub.dataset_download("birdy654/cifake-real-and-ai-generated-synthet
 
 print("Path to dataset files:", path)
 
+# apply random transforms to the training data to increase the diversity of the dataset and help prevent overfitting, while keeping the test data unchanged for accurate evaluation of model performance
 train_transform = transforms.Compose([
     transforms.Resize((224,224)),
     transforms.RandomHorizontalFlip(),
@@ -21,6 +22,7 @@ train_transform = transforms.Compose([
     )
 ])
 
+# apply transforms to test data, 224x244 resizing and specific normalization due to ImageNet standards
 test_transform = transforms.Compose([
     transforms.Resize((224,224)),
     transforms.ToTensor(),
@@ -39,10 +41,6 @@ test_dataset = datasets.ImageFolder(
     root=f"{path}/test",
     transform=test_transform
 )
-
-# train_dataset.classes
-train_dataset[1]
-print(train_dataset[0][0].shape)
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 

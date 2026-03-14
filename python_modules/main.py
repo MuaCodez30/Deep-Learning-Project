@@ -39,12 +39,17 @@ print(classification_report(labels, preds))
 cm = confusion_matrix(labels, preds)
 print(cm)
 
+plt.figure(figsize=(6,5))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+            xticklabels=["Real","Fake"],
+            yticklabels=["Real","Fake"])
+
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.title("Confusion Matrix")
+plt.show()
+
+# save the trained model to load it later
 torch.save(model.state_dict(), "ai_image_detector.pth")
 
-model = models.resnet50()
 
-model.fc = nn.Linear(model.fc.in_features,2)
-
-model.load_state_dict(torch.load("ai_fake_detector.pth"))
-
-model.eval()
