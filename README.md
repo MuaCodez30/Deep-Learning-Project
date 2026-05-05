@@ -42,7 +42,7 @@ First, upload the repo to your Google Drive. The notebook expects it at `MyDrive
 
 Second, get the trained checkpoints. Open this Drive folder:
 
-PASTE-YOUR-DRIVE-LINK-HERE
+https://drive.google.com/drive/folders/1GlSv4x5GosXg5K3RHs2J53lYMjDC8awJ?usp=share_link
 
 Click "Add shortcut to Drive" and place the shortcut at the root of your Drive, so it shows up at `MyDrive/Downloadables/`. Using a shortcut means it does not consume your own Drive quota. The folder contains three files: `resnet50_weights.pth`, `efficientnet_b0_weights.pth`, and `efficientnet-v2-s_weights.pth`.
 
