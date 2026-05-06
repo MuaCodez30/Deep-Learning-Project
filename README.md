@@ -46,7 +46,7 @@ https://drive.google.com/drive/folders/1GlSv4x5GosXg5K3RHs2J53lYMjDC8awJ?usp=sha
 
 Click "Add shortcut to Drive" and place the shortcut at the root of your Drive, so it shows up at `MyDrive/Downloadables/`. Using a shortcut means it does not consume your own Drive quota. The folder contains three files: `resnet50_weights.pth`, `efficientnet_b0_weights.pth`, and `efficientnet-v2-s_weights.pth`.
 
-Third (optional), the notebook contains Kaggle credentials for a throwaway account, so you do not need to do anything with Kaggle yourself. If for some reason that account stops working, generate your own token at kaggle.com/settings (API section, "Create New Token") and replace the username/key in Section 1 cell 4 of the notebook.
+Third (optional), the notebook contains Kaggle credentials for a throwaway account, so you do not need to do anything with Kaggle yourself. If for some reason that account stops working, generate a custom token at kaggle.com/settings (API section, "Create New Token") and replace the username/key in Section 1 cell 4 of the notebook.
 
 ### 4.2 Running the notebook
 
